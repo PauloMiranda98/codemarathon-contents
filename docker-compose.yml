@@ -1,0 +1,10 @@
+content:
+  build: .
+  volumes:
+   - ./templates:/etc/nginx/templates
+   - .:/codemarathon-contents/
+  ports:
+   - "80:80"
+  environment:
+   - NGINX_HOST=codemarathon.com.br
+   - NGINX_PORT=80
